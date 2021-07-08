@@ -35,6 +35,13 @@ spec:
         image: wurstmeister/kafka:2.12-2.5.0
         ports:
         - containerPort: 9092
+        resources:
+          limits:
+            cpu: "1"
+            memory: 2Gi
+          requests:
+            cpu: 200m
+            memory: 1Gi
         env:
         - name: KAFKA_ADVERTISED_PORT
           value: "30718"
